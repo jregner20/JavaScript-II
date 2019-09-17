@@ -4,6 +4,23 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+function parent(league){
+  const team1 ='Patriots'
+  const team2 ='Chiefs'
+  console.log(`${team1} and ${team2} are the best teams in the ${league}`)
+
+  function conference(ConfName){
+    console.log(`They both play in the ${ConfName}`);
+
+    function teamcity(CityName){
+      console.log(`${team1} are from ${CityName}`);
+    }
+    teamcity('New England');
+  }
+  conference('AFC')
+}
+parent('NFL')
+
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
